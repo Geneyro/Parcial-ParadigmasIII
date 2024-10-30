@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="titulo">Juego del Ahorcado</h1>
+
+    <div class="flex-row">
+      <div class="col">
+        <h2 id="palabra" class="palabra">_ _ _ _ _</h2>
+        <p id="hueco-pista">Pulsa el botón de pista si necesitas ayuda</p>
+      </div>
+      <div class="col">
+        <picture>
+            <img src="lg_imagenes/ahorcado_6.png" alt="Etapa 6" id="image6" class="fade-in">
+            <img src="lg_imagenes/ahorcado_5.png" alt="Etapa 5" id="image5" class="fade-in">
+            <img src="lg_imagenes/ahorcado_4.png" alt="Etapa 4" id="image4" class="fade-in">
+            <img src="lg_imagenes/ahorcado_3.png" alt="Etapa 3" id="image3" class="fade-in">
+            <img src="lg_imagenes/ahorcado_2.png" alt="Etapa 2" id="image2" class="fade-in">
+            <img src="lg_imagenes/ahorcado_1.png" alt="Etapa 1" id="image1" class="fade-in">
+            <img src="lg_imagenes/ahorcado_0.png" alt="Etapa 0" id="image0" class="fade-in">
+        </picture>
+      </div>
+    </div>
+
+    <div id="abcdario" class="flex-row no-wrap">
+      <!-- Letras se generan automáticamente desde el JavaScript -->
+    </div>
+
+    <div class="flex-row">
+      <button onclick="pista()">Pista</button>
+      <button onclick="inicio()">Elegir otra palabra</button>
+    </div>
+
+    <div class="flex-row">
+      <h3>Intentos restantes: <span id="intentos">6</span></h3>
+    </div>
+
+    <h3 id="acierto"></h3>
+    <h2 id="msg-final"></h2>
+  </div>
+
+  <script src="lgjuego.js"></script>
+</body>
+</html>
